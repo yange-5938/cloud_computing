@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    image: microservice1:server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - hello-world-service
+      - product-descp-service
+      - product-price-service
+  hello-world-service:
+    build: ./hello-world-service
+    image: microservice1:hello
+  product-descp-service:
+    build: ./product-descp-service
+    image: microservice1:productdescp
+  product-price-service:
+    build: ./product-price-service
+    image: microservice1:productprice
+
