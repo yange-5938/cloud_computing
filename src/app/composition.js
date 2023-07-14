@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-const composer = require('openwhisk-composer');
+const composer = require("openwhisk-composer");
 
 module.exports = composer.parallel(
-    composer.action('hello-world'),
-    composer.action('product-price'),
-    composer.action('product-name'),
-    composer.action('product-url'),
+  composer.action("hello-world"),
+  composer.action("product-price"),
+  composer.action("product-name"),
+  composer.action("product-url"),
+  composer.action("group")
 );
-
